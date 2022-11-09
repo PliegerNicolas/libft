@@ -1,28 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/08 11:00:22 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/09 15:43:50 by nplieger         ###   ########.fr       */
+/*   Created: 2022/11/09 11:15:33 by nplieger          #+#    #+#             */
+/*   Updated: 2022/11/09 11:27:29 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-#include <stdint.h>
 
-void	ft_bzero(void *s, size_t n);
+size_t	ft_strlen(const char *s);
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	void		*ptr;
+	char		*str;
+	size_t		len;
 
-	if (size && ((SIZE_MAX / size) < nmemb))
+	if (!s || !f)
 		return (NULL);
-	ptr = malloc(nmemb * size);
-	if (!ptr)
+	len = ft_strlen(s);
+	str = malloc((len + 1) * sizeof(char));
+	str[len] = '\0';
+	if (!str)
 		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	while (len--)
+		str[len] = f(len, s[len]);
+	return (str);
 }
