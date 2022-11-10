@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 16:30:58 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/09 09:46:19 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/10 14:27:43 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -31,7 +31,8 @@ static size_t	ft_count_sections(char const *s, char const c)
 			while (s[i] != c && s[i])
 				i++;
 		}
-		i++;
+		if (s[i])
+			i++;
 	}
 	return (sections);
 }
@@ -89,3 +90,27 @@ char	**ft_split(char const *s, char c)
 	ret[j] = 0;
 	return (ret);
 }
+
+/*
+#include <string.h>
+#include <stdio.h>
+int	main(void)
+{
+
+	char		**tabstr1;
+	int			i;
+
+	i = 0;
+	if (!(tabstr1 = ft_split("lorem ipsum dolor sit amet, consectetur 
+	adipiscing elit. Sed non risus. Suspendisse", ' ')))
+		printf("NULL");
+	else
+	{
+		while (tabstr1[i] != NULL)
+		{
+			printf("%s\n", tabstr1[i]);
+			i++;
+		}
+	}
+}
+*/
