@@ -6,19 +6,15 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 13:46:02 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/08 11:15:19 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/10 10:15:13 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t		i;
-
-	i = 0;
-	while (i < n)
-	{
-		*(unsigned char *)(s + i) = '\0';
-		i++;
-	}
+	if (!n)
+		return ;
+	while (n)
+		*(unsigned char *)(s + --n) = '\0';
 }
