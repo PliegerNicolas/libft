@@ -6,12 +6,10 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 15:01:34 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/10 12:18:19 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/12 11:55:37 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-void	*ft_memcpy(void *dest, const void *src, size_t n);
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {

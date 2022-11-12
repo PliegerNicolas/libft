@@ -6,12 +6,10 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/08 12:18:52 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/09 09:27:57 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/12 11:56:59 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-size_t	ft_strlen(const char *s);
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {

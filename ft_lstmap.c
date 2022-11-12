@@ -6,14 +6,10 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 18:00:45 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/09 18:13:24 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/12 11:55:07 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-t_list	*ft_lstnew(void *content);
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstadd_back(t_list **lst, t_list *new);
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {

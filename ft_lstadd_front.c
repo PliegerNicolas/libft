@@ -6,12 +6,10 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/09 13:42:47 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/09 14:52:13 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/12 11:54:33 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
-
-t_list	*ft_lstnew(void *content);
 
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
