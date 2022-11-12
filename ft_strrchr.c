@@ -6,7 +6,7 @@
 /*   By: nplieger <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/07 19:21:19 by nplieger          #+#    #+#             */
-/*   Updated: 2022/11/12 11:57:38 by nplieger         ###   ########.fr       */
+/*   Updated: 2022/11/12 14:32:29 by nplieger         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
@@ -23,9 +23,7 @@ char	*ft_strrchr(const char *s, int c)
 	if (!c)
 		return (str + revi);
 	while (revi--)
-	{
 		if (str[revi] == (char)c)
 			return (str + revi);
-	}
 	return (NULL);
 }
