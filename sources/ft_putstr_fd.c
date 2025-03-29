@@ -11,9 +11,13 @@
 /* ************************************************************************** */
 #include "libft.h"
 
-void	ft_putstr_fd(char *s, int fd)
+size_t	ft_putstr_fd(char *s, int fd)
 {
+	size_t	count = 0;
+
 	if (s)
 		while (*s)
-			write(fd, s++, 1);
+			count += write(fd, s++, 1);
+
+	return count;
 }
